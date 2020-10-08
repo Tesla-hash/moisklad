@@ -1,0 +1,10 @@
+<div id="stock-qty" style="margin-bottom: 10px;">
+    <h4>Наличие</h4>
+	<ol>
+    <?php foreach ($this->getStocksData() as $stock):?>
+        <li>
+            <?php echo $stock->getStockName();?> - <?php echo round($stock->getQty());?> шт.
+        </li>
+    <?php endforeach;?>
+    </ol>
+</div>

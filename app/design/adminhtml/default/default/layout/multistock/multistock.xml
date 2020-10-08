@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<layout>
+	<multistock_adminhtml_multistock_edit>
+		<reference name="content">
+			<block type="multistock/adminhtml_stock_edit" name="stock.edit" />
+		</reference>
+		<reference name="left">
+			<block type="multistock/adminhtml_stock_edit_tabs" name="stock.tabs">
+				<action method="addTab">
+					<name>form_section_stock</name>
+					<block>multistock/adminhtml_stock_edit_tab_general</block>
+				</action>
+			</block>
+		</reference>
+	</multistock_adminhtml_multistock_edit>
+	<multistock_adminhtml_multistock_new>
+		<reference name="content">
+			<block type="multistock/adminhtml_stock_edit" name="stock.edit" />
+		</reference>
+		<reference name="left">
+			<block type="multistock/adminhtml_stock_edit_tabs" name="stock.tabs">
+				<action method="addTab">
+					<name>form_section_stock</name>
+					<block>multistock/adminhtml_stock_edit_tab_general</block>
+				</action>
+			</block>
+		</reference>
+	</multistock_adminhtml_multistock_new>
+	<adminhtml_catalog_product_edit>
+		<reference name="product_tabs">
+			<action method="addTab">
+				<name>stocks</name>
+				<block>multistock/adminhtml_multistock_tab</block>
+			</action>
+			<action method="removeTab">
+	            <child>inventory</child>
+	        </action>
+		</reference>
+	</adminhtml_catalog_product_edit>
+</layout>
